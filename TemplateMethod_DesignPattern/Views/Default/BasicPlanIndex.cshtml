@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Netflix Planlar</title>
+    <style>
+
+        body {
+            background-color: #222f3e;
+        }
+        h3{
+            font-family:Georgia;
+            line-height:3em;
+            text-align:left;
+            color:aliceblue;
+        }
+        i{
+            color: #d63031;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="nav" class="navbar navbar-expand-lg bg-secondary navbar-dark">
+        <div class="container">
+            <a href="#" id="netflix" class="navbar-brand"><b>Netflix</b> Planlar</a>
+
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Kategoriler</a>
+                </li>
+            </ul>
+            <ul  class="navbar-nav me-2">
+                <li  class=" nav-item active">
+                    <a href="#"  class="nav-link">Login</a>
+                </li>
+               
+                <li  class="nav-item">
+                    <a href="#"  class="nav-link">Register</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <br />
+        <h3>Plan Adı: <i>@ViewBag.v1</i></h3>
+         <h3>Kişi sayısı: @ViewBag.v2</h3>
+        <h3>Plan Fiyatı:<mark>@ViewBag.v3</mark> </h3>
+         <h3>Plan İçeriği: @ViewBag.v4</h3>
+         <h3>Plan Çözünürlüğü: @ViewBag.v5</h3>
+         <a href="/Default/StandardPlanIndex/"  class="btn btn-warning">Standart Plan</a>
+         <a href="/Default/UltraPlanIndex/"  class="btn btn-success">Ultra Plan</a>
+    </div>
+
+</body>
+</html>
